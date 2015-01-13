@@ -47,7 +47,9 @@ private static final Logger LOG = Logger.getLogger(ReadLog.class);
 
                 if (line.indexOf(args[1]) != -1) {
                     writing(args[1]);
-                    LOG.debug(line);
+                    if (LOG.isDebugEnabled()) {
+                        LOG.debug(line);
+                    }
                     break;
                 }				   				  
             }
